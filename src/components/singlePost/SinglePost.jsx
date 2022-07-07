@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./singlePost.css"
 import axios from "axios";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import {Context} from "../../context/Context";
 
@@ -14,10 +13,12 @@ export default function SinglePost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
+  const params = useParams();
+
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get(`https://mern-blog-mottesi.herokuapp.com/api/posts/${params.postid}`);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
