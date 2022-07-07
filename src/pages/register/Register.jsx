@@ -20,7 +20,7 @@ export default function Register() {
       });
       //Redirect to login page if successful
       console.log(res);
-      res.data && window.location.replace("https://62c75ba8e4696e0009cb34bc--keen-rolypoly-3dd19c.netlify.app/login");
+      res.data && window.location.replace("https://mern-blog-mottesi.herokuapp.com/api/auth/register/login");
     } catch (err) {
       setError(true);
     }
