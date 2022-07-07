@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 
 export default function Register() {
@@ -8,6 +8,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ export default function Register() {
       });
       //Redirect to login page if successful
       console.log(res);
-      res.data && window.location.replace("https://mern-blog-mottesi.herokuapp.com/api/auth/register/login");
+      res.data && navigate("/login");
     } catch (err) {
       setError(true);
     }
