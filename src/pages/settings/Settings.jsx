@@ -1,39 +1,3 @@
-// import "./settings.css"
-// import Sidebar from "../../components/sidebar/Sidebar"
-
-// export default function Settings() {
-//     return (
-//         <div className="settings">
-//             <div className="settingsWrapper">
-//                 <div className="settingsTitle">
-//                     <span className="settingsUpdateTitle">Update Your Account</span>
-//                     <span className="settingsDeleteTitle">Delete Your Account</span>
-//                 </div>
-//                 <form className="settingsForm">
-//                     <label>Profile Picture</label>
-//                     <div className="settingsPP">
-//                         <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg"
-//                         alt="" 
-//                     />
-//                          <label htmlFor="fileInput">
-//                             <i className="settingsPPIcon fa-solid fa-user"></i>
-//                          </label>
-//                          <input type="file" id="fileInput" style={{display:"none"}}/>
-//                     </div>
-//                     <label className="Username">Username</label>
-//                     <input className="Username" type="text" placeholder="Safak" />
-//                     <label>Email</label>
-//                     <input type="email" placeholder="safak@gmail.com" />
-//                     <label>Password</label>
-//                     <input type="password" />
-//                     <button className="settingsSubmit">Update</button>
-//                 </form>
-//             </div>
-//             <Sidebar />
-//         </div>
-//     );
-// }
-
 
 import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";

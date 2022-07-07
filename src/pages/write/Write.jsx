@@ -8,6 +8,7 @@ export default function Write() {
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
     const { user } = useContext(Context);
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +29,7 @@ export default function Write() {
         }
         try{
             const res = axios.post("https://mern-blog-mottesi.herokuapp.com/api/posts", newPost);
-            window.location.replace("https://mern-blog-mottesi.herokuapp.com/api/post/"+ res.data._id)
+            navigate("/post");
         }catch (err) {}
           
         };
