@@ -1,0 +1,34 @@
+.header{
+    margin-top: 0%;
+}
+
+.headerTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 3;
+    color: orangered;
+
+}
+
+.headerImg{
+    top: -50%;
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+
+}
+.headerTitleSmall{
+    position: absolute;
+    top: 8%;
+    font-size: 20px;
+}
+
+.headerTitleLarge{
+    position: absolute;
+    top: 10%;
+    font-size: 90px;
+}
+
+
