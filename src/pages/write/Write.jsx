@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./write.css"
 
