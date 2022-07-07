@@ -28,7 +28,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
+      await axios.delete(`https://mern-blog-mottesi.herokuapp.com/api/posts/${params.postid}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -37,7 +37,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`https://mern-blog-mottesi.herokuapp.com/api/posts/${params.postid}`, {
         username: user.username,
         title,
         desc,

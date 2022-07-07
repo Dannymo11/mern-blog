@@ -67,11 +67,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://mern-blog-mottesi.herokuapp.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put("https://mern-blog-mottesi.herokuapp.com/api/users" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

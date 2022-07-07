@@ -23,12 +23,12 @@ export default function Write() {
             data.append("file", file);
             newPost.photo = filename;
             try{
-                await axios.post("/upload", data);
+                await axios.post("https://mern-blog-mottesi.herokuapp.com/api/upload", data);
             }catch(err){}
         }
         try{
-            const res = axios.post("/posts", newPost);
-            window.location.replace("/post/"+ res.data._id)
+            const res = axios.post("https://mern-blog-mottesi.herokuapp.com/api/posts", newPost);
+            window.location.replace("https://mern-blog-mottesi.herokuapp.com/api/post/"+ res.data._id)
         }catch (err) {}
           
         };
