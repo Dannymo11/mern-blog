@@ -30,7 +30,7 @@ export default function Write() {
         }
         try{
             const res = axios.post("https://mern-blog-mottesi.herokuapp.com/api/posts", newPost);
-            navigate("/post");
+            res.data && navigate("/post");
         }catch (err) {}
           
         };
