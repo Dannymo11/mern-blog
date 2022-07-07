@@ -24,7 +24,9 @@ export default function SinglePost() {
       setDesc(res.data.desc);
     };
     getPost();
-  }, [path]);
+  }, 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  [path]);
 
   const handleDelete = async () => {
     try {
